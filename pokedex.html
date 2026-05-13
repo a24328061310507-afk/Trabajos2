@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokedex</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="pokedex.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            MAESTRO POKEMON:<br>
+            Bruno Ivan Ramos Abalos
+        </h1>
+
+        <!-- Imagen principal -->
+        <img 
+            src="../pokemon1.jpg"
+            alt="Pokemon Banner"
+            class="banner"
+        >
+
+        <!-- Buscador -->
+        <div class="search-box">
+
+            <input 
+                type="text"
+                placeholder="Pikachu"
+                id="pokeNameInput"
+                name="pokeName"
+            >
+
+            <button onclick="fetchPokemon()" class="button">
+                Presiona
+            </button>
+
+        </div>
+
+        <!-- Tarjeta -->
+        <div class="pokemon-card">
+
+            <!-- Imagen Pokémon -->
+            <img 
+                src="../pokemaster.jpg"
+                alt="PokeMaster"
+                id="pokeImg"
+                class="pokeImg"
+            >
+
+            <!-- Información -->
+            <div class="info">
+
+                <div id="pokeName" class="pokeinfo"></div>
+
+                <div id="pokeHe" class="pokeinfo"></div>
+
+                <div id="pokeWe" class="pokeinfo"></div>
+
+                <div id="pokeType" class="pokeinfo"></div>
+
+                <div id="pokeitem" class="pokeinfo"></div>
+
+                <div id="pokemove1" class="pokeinfo"></div>
+
+                <div id="pokemove2" class="pokeinfo"></div>
+
+                <div id="pokemove3" class="pokeinfo"></div>
+
+                <div id="pokemove4" class="pokeinfo"></div>
+
+            </div>
+
+            <!-- Extra -->
+            <div class="extra-info">
+
+                <div id="pokeid" class="pokeid"></div>
+
+                <div id="pokeorder" class="pokeorder"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Gráfica -->
+        <div class="grafica">
+            <canvas id="miCanvas"></canvas>
+        </div>
+
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/Chart.js"></script>
+
+    <!-- JS -->
+    <script src="pokedex.js"></script>
+
+</body>
+
+</html>

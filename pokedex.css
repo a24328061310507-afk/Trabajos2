@@ -1,0 +1,275 @@
+/* ============================= */
+/* POKEDEX.CSS */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    color: #ffcb05;
+    text-shadow: 0 0 15px #ffcb05;
+}
+
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.search-box input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.search-box button{
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ef4444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-box button:hover{
+    transform: scale(1.05);
+    background: #dc2626;
+    box-shadow: 0 0 15px #ef4444;
+}
+
+#pokedex{
+    text-align: center;
+}
+
+.pokemon-card{
+    background: rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 25px;
+    animation: aparecer 0.4s ease;
+}
+
+.pokemon-card img{
+    width: 180px;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+}
+
+.pokemon-card img:hover{
+    transform: scale(1.1);
+}
+
+.pokemon-name{
+    font-size: 2rem;
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.pokemon-id{
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.types{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.type{
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Tipos Pokémon */
+
+.fire{
+    background: #f97316;
+}
+
+.water{
+    background: #3b82f6;
+}
+
+.grass{
+    background: #22c55e;
+}
+
+.electric{
+    background: #facc15;
+    color: black;
+}
+
+.psychic{
+    background: #ec4899;
+}
+
+.ice{
+    background: #67e8f9;
+    color: black;
+}
+
+.dragon{
+    background: #7c3aed;
+}
+
+.dark{
+    background: #1e293b;
+}
+
+.fairy{
+    background: #f9a8d4;
+    color: black;
+}
+
+.normal{
+    background: #9ca3af;
+}
+
+.fighting{
+    background: #b91c1c;
+}
+
+.flying{
+    background: #60a5fa;
+}
+
+.poison{
+    background: #a855f7;
+}
+
+.ground{
+    background: #ca8a04;
+}
+
+.rock{
+    background: #78716c;
+}
+
+.bug{
+    background: #84cc16;
+}
+
+.ghost{
+    background: #6d28d9;
+}
+
+.steel{
+    background: #94a3b8;
+    color: black;
+}
+
+.stats{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.stat{
+    margin-bottom: 12px;
+}
+
+.stat-name{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.bar{
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill{
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #22c55e, #3b82f6);
+}
+
+.loading,
+.error{
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+}
+
+.error{
+    color: #f87171;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 600px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .search-box{
+        flex-direction: column;
+    }
+
+    .search-box button{
+        width: 100%;
+    }
+
+    .pokemon-card img{
+        width: 140px;
+    }
+}
